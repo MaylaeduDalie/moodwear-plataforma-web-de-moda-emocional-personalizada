@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodWear - Seu humor, seu estilo</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>MoodWear</h1>
+        <p>Seu humor, seu estilo.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="#checkin">Check-in</a></li>
+            <li><a href="#resultado">Resultado</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- ================= PERFIL DO USUÁRIO (RF01) ================= -->
+        <section id="perfil">
+            <h2>Perfil do Usuário</h2>
+
+            <form>
+
+                <fieldset>
+                    <legend>Tipo de Corpo</legend>
+
+                    <input type="radio" id="ampulheta" name="corpo" value="ampulheta">
+                    <label for="ampulheta">Ampulheta</label><br>
+
+                    <input type="radio" id="retangular" name="corpo" value="retangular">
+                    <label for="retangular">Retangular</label><br>
+
+                    <input type="radio" id="triangulo" name="corpo" value="triangulo">
+                    <label for="triangulo">Triângulo</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Estilo Predominante</legend>
+
+                    <input type="radio" id="casual" name="estilo" value="casual">
+                    <label for="casual">Casual</label><br>
+
+                    <input type="radio" id="elegante" name="estilo" value="elegante">
+                    <label for="elegante">Elegante</label><br>
+
+                    <input type="radio" id="esportivo" name="estilo" value="esportivo">
+                    <label for="esportivo">Esportivo</label>
+                </fieldset>
+
+            </form>
+        </section>
+
+
+        <!-- ================= CHECK-IN DE HUMOR ================= -->
+        <section id="checkin">
+            <h2>Como você está se sentindo hoje?</h2>
+
+            <form>
+
+                <label for="humor">Selecione seu humor:</label>
+
+                <select id="humor" name="humor">
+
+                    <optgroup label="Humores Positivos">
+                        <option value="calmo">Calmo</option>
+                        <option value="feliz">Feliz</option>
+                        <option value="confianca">Confiante</option>
+                    </optgroup>
+
+                    <optgroup label="Humores Energéticos">
+                        <option value="energetico">Energético</option>
+                        <option value="motivado">Motivado</option>
+                        <option value="ousado">Ousado</option>
+                    </optgroup>
+
+                    <optgroup label="Humores Criativos">
+                        <option value="criativo">Criativo</option>
+                        <option value="inspirado">Inspirado</option>
+                        <option value="sonhador">Sonhador</option>
+                    </optgroup>
+
+                </select>
+
+                <br><br>
+
+                <button type="submit">Gerar recomendação</button>
+
+            </form>
+        </section>
+
+
+        <!-- ================= RESULTADO ================= -->
+        <section id="resultado">
+            <h2>Recomendação de Estilo</h2>
+
+            <article>
+                <h3>Look sugerido</h3>
+
+                <figure>
+                    <img src="moodboard-exemplo.jpg"
+                        alt="Moodboard com combinação de roupas em tons neutros e azuis">
+                    <figcaption>
+                        Este look transmite serenidade e equilíbrio através de tons neutros e azul sereno.
+                    </figcaption>
+                </figure>
+
+                <p>
+                    As cores e modelagens foram escolhidas com base no seu humor selecionado.
+                </p>
+
+                <!-- PÍLULA DE CONHECIMENTO (RF05) -->
+                <aside>
+                    <h4>Pílula de Conhecimento</h4>
+                    <p>
+                        O azul está associado à calma, confiança e estabilidade emocional.
+                    </p>
+                </aside>
+
+                <!-- DETALHAMENTO DE PEÇA (RF06) -->
+                <details>
+                    <summary>Ver detalhes da Jaqueta</summary>
+                    <p>
+                        Material: Algodão |
+                        Cor: Azul Sereno |
+                        Estilo: Casual Minimalista
+                    </p>
+                </details>
+
+                <br>
+
+                <!-- BOTÃO FAVORITAR (RF03) -->
+                <button type="button">❤️ Favoritar Look</button>
+
+            </article>
+        </section>
+
+    </main>
+
+
+    <!-- ================= RODAPÉ + LGPD ================= -->
+    <footer>
+
+        <form>
+            <input type="checkbox" id="termos" name="termos">
+            <label for="termos">
+                Declaro que li e concordo com os Termos de Uso e Política de Privacidade.
+            </label>
+        </form>
+
+        <p>Projeto acadêmico - Desenvolvimento Web</p>
+
+    </footer>
+
+</body>
+
+</html>
