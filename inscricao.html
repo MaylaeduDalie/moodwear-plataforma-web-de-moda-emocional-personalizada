@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>1º Hackathon de Informática da Escola</title>
+</head>
+<body>
+
+    <h1>Inscrição - 1º Hackathon de Informática da Escola</h1>
+
+    <form>
+
+        <!-- BLOCO 1 -->
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <label>Nome Completo:</label><br>
+            <input type="text" name="nome" required><br><br>
+
+            <label>E-mail:</label><br>
+            <input type="email" name="email" required><br><br>
+
+            <label>Senha para o sistema:</label><br>
+            <input type="password" name="senha" required><br><br>
+
+            <label>Data de Nascimento:</label><br>
+            <input type="date" name="data_nascimento" required><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- BLOCO 2 -->
+        <fieldset>
+            <legend>Perfil Técnico</legend>
+
+            <p>Linguagens de interesse:</p>
+
+            <input type="checkbox" name="linguagens" value="HTML"> HTML<br>
+            <input type="checkbox" name="linguagens" value="CSS"> CSS<br>
+            <input type="checkbox" name="linguagens" value="JavaScript"> JavaScript<br>
+            <input type="checkbox" name="linguagens" value="Python"> Python<br><br>
+
+            <p>Nível de experiência:</p>
+
+            <input type="radio" name="nivel" value="Iniciante"> Iniciante<br>
+            <input type="radio" name="nivel" value="Intermediario"> Intermediário<br>
+            <input type="radio" name="nivel" value="Avancado"> Avançado<br><br>
+
+            <label>Anexar currículo ou portfólio:</label><br>
+            <input type="file" name="curriculo"><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- BLOCO 3 -->
+        <fieldset>
+            <legend>Detalhes do Evento</legend>
+
+            <label>Tamanho da camiseta:</label><br>
+            <select name="tamanho">
+                <option value="P">P</option>
+                <option value="M">M</option>
+                <option value="G">G</option>
+                <option value="GG">GG</option>
+            </select><br><br>
+
+            <label>Carta de motivação:</label><br>
+            <textarea name="motivacao" rows="5" cols="40"></textarea><br><br>
+        </fieldset>
+
+        <br>
+
+        <button type="submit">Enviar Inscrição</button>
+
+    </form>
+
+</body>
+</html>
