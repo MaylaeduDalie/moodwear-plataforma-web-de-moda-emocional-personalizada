@@ -1,0 +1,23 @@
+body {
+  font-family: Georgia, serif;
+  background-color: #f5f1e6; /* bege claro suave */
+  color: #5c4033; /* marrom elegante */
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #6f4e37; /* marrom café */
+  text-align: center;
+}
+
+p {
+  line-height: 1.6;
+}
+
+section {
+  background-color: #ede6d6; /* bege levemente mais escuro */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
