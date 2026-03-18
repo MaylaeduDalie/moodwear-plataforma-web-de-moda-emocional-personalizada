@@ -1,40 +1,50 @@
-main {
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #dbeafe, #f0f9ff);
+  margin: 0;
+}
+
+header {
+  text-align: center;
   padding: 20px;
+  background: #4a90e2;
+  color: white;
 }
 
-/* ===== MOBILE ===== */
-@media screen and (max-width: 768px) {
-
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-  }
-
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 10px;
+  background: #eee;
 }
 
-/* ===== TABLET ===== */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-
-  nav ul {
-    display: flex;
-    justify-content: space-around;
-  }
-
+main {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
 }
 
-/* ===== DESKTOP ===== */
-@media screen and (min-width: 1025px) {
+button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
-  nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-  }
+button:hover {
+  background-color: #357abd;
+  transform: scale(1.05);
+}
 
+img {
+  width: 100%;
+  border-radius: 10px;
 }
