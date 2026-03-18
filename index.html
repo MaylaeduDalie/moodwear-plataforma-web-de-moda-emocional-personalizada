@@ -26,52 +26,47 @@
 
     <main>
 
-        <!-- ================= PERFIL DO USUÁRIO ================= -->
+        <!-- PERFIL -->
         <section id="perfil">
             <h2>Perfil do Usuário</h2>
 
             <form>
-
                 <fieldset>
                     <legend>Tipo de Corpo</legend>
 
-                    <input type="radio" id="ampulheta" name="corpo" value="ampulheta">
+                    <input type="radio" id="ampulheta" name="corpo">
                     <label for="ampulheta">Ampulheta</label><br>
 
-                    <input type="radio" id="retangular" name="corpo" value="retangular">
+                    <input type="radio" id="retangular" name="corpo">
                     <label for="retangular">Retangular</label><br>
 
-                    <input type="radio" id="triangulo" name="corpo" value="triangulo">
+                    <input type="radio" id="triangulo" name="corpo">
                     <label for="triangulo">Triângulo</label>
                 </fieldset>
 
                 <fieldset>
                     <legend>Estilo Predominante</legend>
 
-                    <input type="radio" id="casual" name="estilo" value="casual">
+                    <input type="radio" id="casual" name="estilo">
                     <label for="casual">Casual</label><br>
 
-                    <input type="radio" id="elegante" name="estilo" value="elegante">
+                    <input type="radio" id="elegante" name="estilo">
                     <label for="elegante">Elegante</label><br>
 
-                    <input type="radio" id="esportivo" name="estilo" value="esportivo">
+                    <input type="radio" id="esportivo" name="estilo">
                     <label for="esportivo">Esportivo</label>
                 </fieldset>
-
             </form>
         </section>
 
-
-        <!-- ================= CHECK-IN DE HUMOR ================= -->
+        <!-- CHECK-IN -->
         <section id="checkin">
             <h2>Como você está se sentindo hoje?</h2>
 
-            <form>
-
+            <form onsubmit="return false;">
                 <label for="humor">Selecione seu humor:</label>
 
-                <select id="humor" name="humor">
-
+                <select id="humor">
                     <optgroup label="Humores Positivos">
                         <option value="calmo">Calmo</option>
                         <option value="feliz">Feliz</option>
@@ -89,18 +84,15 @@
                         <option value="inspirado">Inspirado</option>
                         <option value="sonhador">Sonhador</option>
                     </optgroup>
-
                 </select>
 
                 <br><br>
 
-                <button type="submit">Gerar recomendação</button>
-
+                <button type="button" id="gerar">Gerar recomendação</button>
             </form>
         </section>
 
-
-        <!-- ================= RESULTADO ================= -->
+        <!-- RESULTADO -->
         <section id="resultado">
             <h2>Recomendação de Estilo</h2>
 
@@ -108,14 +100,13 @@
                 <h3>Look sugerido</h3>
 
                 <figure>
-                    <img src="moodboard-exemplo.jpg"
-                        alt="Moodboard com combinação de roupas em tons neutros e azuis">
-                    <figcaption>
-                        Este look transmite serenidade e equilíbrio através de tons neutros e azul sereno.
+                    <img src="moodboard-exemplo.jpg" alt="Moodboard de roupas">
+                    <figcaption id="legenda">
+                        Este look transmite serenidade e equilíbrio.
                     </figcaption>
                 </figure>
 
-                <p>
+                <p id="texto-resultado">
                     As cores e modelagens foram escolhidas com base no seu humor selecionado.
                 </p>
 
@@ -129,38 +120,22 @@
                 <details>
                     <summary>Ver detalhes da Jaqueta</summary>
                     <p>
-                        Material: Algodão |
-                        Cor: Azul Sereno |
-                        Estilo: Casual Minimalista
+                        Material: Algodão | Cor: Azul Sereno | Estilo: Casual
                     </p>
                 </details>
 
                 <br>
 
-                <!-- BOTÃO FAVORITAR -->
                 <button type="button" id="favoritar">❤️ Favoritar Look</button>
-
             </article>
         </section>
 
     </main>
 
-
-    <!-- ================= RODAPÉ ================= -->
     <footer>
-
-        <form>
-            <input type="checkbox" id="termos" name="termos">
-            <label for="termos">
-                Declaro que li e concordo com os Termos de Uso e Política de Privacidade.
-            </label>
-        </form>
-
         <p>Projeto acadêmico - Desenvolvimento Web</p>
-
     </footer>
 
-    <!-- SCRIPT JS -->
     <script src="script.js"></script>
 
 </body>
