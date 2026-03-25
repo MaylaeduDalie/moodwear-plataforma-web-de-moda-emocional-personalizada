@@ -26,40 +26,58 @@
 
     <main>
 
-        <!-- PERFIL -->
         <section id="perfil">
             <h2>Perfil do Usuário</h2>
 
-            <form>
+            <form id="form-perfil">
                 <fieldset>
                     <legend>Tipo de Corpo</legend>
+                    <div class="opcoes-container">
+                        <input type="radio" id="corpo_ampulheta" name="corpo" value="ampulheta">
+                        <label for="corpo_ampulheta">Ampulheta</label>
 
-                    <input type="radio" id="ampulheta" name="corpo">
-                    <label for="ampulheta">Ampulheta</label><br>
+                        <input type="radio" id="corpo_retangular" name="corpo" value="retangular">
+                        <label for="corpo_retangular">Retangular</label>
 
-                    <input type="radio" id="retangular" name="corpo">
-                    <label for="retangular">Retangular</label><br>
+                        <input type="radio" id="corpo_triangulo" name="corpo" value="triangulo">
+                        <label for="corpo_triangulo">Triângulo (Pera)</label>
 
-                    <input type="radio" id="triangulo" name="corpo">
-                    <label for="triangulo">Triângulo</label>
+                        <input type="radio" id="corpo_triangulo_invertido" name="corpo" value="trianguloInvertido">
+                        <label for="corpo_triangulo_invertido">Triângulo Invertido</label>
+
+                        <input type="radio" id="corpo_oval" name="corpo" value="oval">
+                        <label for="corpo_oval">Oval (Maçã)</label>
+                    </div>
                 </fieldset>
 
                 <fieldset>
                     <legend>Estilo Predominante</legend>
+                    <div class="opcoes-container">
+                        <input type="radio" id="estilo_casual" name="estilo" value="casual">
+                        <label for="estilo_casual">Casual / Esportivo</label>
 
-                    <input type="radio" id="casual" name="estilo">
-                    <label for="casual">Casual</label><br>
+                        <input type="radio" id="estilo_elegante" name="estilo" value="elegante">
+                        <label for="estilo_elegante">Elegante / Sofisticado</label>
 
-                    <input type="radio" id="elegante" name="estilo">
-                    <label for="elegante">Elegante</label><br>
+                        <input type="radio" id="estilo_classico" name="estilo" value="classico">
+                        <label for="estilo_classico">Clássico / Tradicional</label>
 
-                    <input type="radio" id="esportivo" name="estilo">
-                    <label for="esportivo">Esportivo</label>
+                        <input type="radio" id="estilo_romantico" name="estilo" value="romantico">
+                        <label for="estilo_romantico">Romântico</label>
+
+                        <input type="radio" id="estilo_criativo" name="estilo" value="criativo">
+                        <label for="estilo_criativo">Criativo</label>
+
+                        <input type="radio" id="estilo_dramatico" name="estilo" value="dramatico">
+                        <label for="estilo_dramatico">Dramático / Urbano</label>
+                        
+                        <input type="radio" id="estilo_sedutor" name="estilo" value="sexy">
+                        <label for="estilo_sedutor">Sexy / Sedutor</label>
+                    </div>
                 </fieldset>
             </form>
         </section>
 
-        <!-- CHECK-IN -->
         <section id="checkin">
             <h2>Como você está se sentindo hoje?</h2>
 
@@ -67,6 +85,7 @@
                 <label for="humor">Selecione seu humor:</label>
 
                 <select id="humor">
+                    <option value="" disabled selected>Escolha seu humor...</option>
                     <optgroup label="Humores Positivos">
                         <option value="calmo">Calmo</option>
                         <option value="feliz">Feliz</option>
@@ -86,43 +105,26 @@
                     </optgroup>
                 </select>
 
-                <br><br>
-
                 <button type="button" id="gerar">Gerar recomendação</button>
             </form>
         </section>
 
-        <!-- RESULTADO -->
         <section id="resultado">
             <h2>Recomendação de Estilo</h2>
 
             <article>
-                <h3>Look sugerido</h3>
+                <h3 id="titulo-look">Seu Look MoodWear</h3>
 
                 <figure>
-                    <img src="moodboard-exemplo.jpg" alt="Moodboard de roupas">
+                    <img id="imagem-look" src="https://images.unsplash.com/photo-1434389678241-7e51084b655a?q=80&w=600" alt="Look sugerido">
                     <figcaption id="legenda">
-                        Este look transmite serenidade e equilíbrio.
+                        Aguardando suas escolhas...
                     </figcaption>
                 </figure>
 
                 <p id="texto-resultado">
-                    As cores e modelagens foram escolhidas com base no seu humor selecionado.
+                    Selecione seu tipo de corpo, estilo e humor para ver a mágica acontecer!
                 </p>
-
-                <aside>
-                    <h4>Pílula de Conhecimento</h4>
-                    <p>
-                        O azul está associado à calma, confiança e estabilidade emocional.
-                    </p>
-                </aside>
-
-                <details>
-                    <summary>Ver detalhes da Jaqueta</summary>
-                    <p>
-                        Material: Algodão | Cor: Azul Sereno | Estilo: Casual
-                    </p>
-                </details>
 
                 <br>
 
