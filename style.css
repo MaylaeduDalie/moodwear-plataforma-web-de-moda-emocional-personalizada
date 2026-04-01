@@ -1,50 +1,237 @@
+/* --- ESTILOS GERAIS (Paleta Marrom/Bege) --- */
+:root {
+  --primary: #8b5a2b;       
+  --primary-dark: #5c4033;  
+  --primary-hover: #734c29; 
+  --bg-creme: #fffdfa;       
+  --bg-bege-light: #f5eedc; 
+  --bg-bege-medium: #e8dcc4;
+  --white: #ffffff;
+  --text-dark: #3e271a;     
+  --text-muted: #826a5c;    
+  --border: #d7ccc8;        
+  --green-success: #2ecc71; 
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #dbeafe, #f0f9ff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-creme);
+  background-image: linear-gradient(135deg, var(--bg-creme) 0%, var(--bg-bege-light) 100%);
   margin: 0;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  color: var(--primary-dark);
+  font-weight: 700;
 }
 
 header {
   text-align: center;
-  padding: 20px;
-  background: #4a90e2;
-  color: white;
+  padding: 50px 20px;
+  background-color: var(--white);
+  border-bottom: 2px solid var(--bg-bege-medium);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  color: var(--primary-dark);
+}
+
+header p {
+  margin: 10px 0 0;
+  color: var(--primary);
+  font-weight: 500;
 }
 
 nav ul {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   list-style: none;
-  padding: 10px;
-  background: #eee;
+  padding: 15px;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border);
+  margin: 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--primary-dark);
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+nav a:hover {
+  color: var(--primary);
+  transform: translateY(-1px);
 }
 
 main {
-  max-width: 800px;
-  margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  margin-top: 20px;
+  max-width: 900px;
+  margin: 50px auto;
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(92, 64, 51, 0.08); 
 }
 
-button {
-  background-color: #4a90e2;
-  color: white;
+section {
+  margin-bottom: 50px;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+  border-bottom: 2px solid var(--bg-bege-medium);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+/* --- ESTILOS DO PERFIL & RÁDIOS --- */
+fieldset {
   border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+legend {
+  font-weight: bold;
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+input[type="radio"] {
+  display: none; 
+}
+
+input[type="radio"] + label {
+  display: inline-block;
+  background-color: var(--bg-bege-light);
+  padding: 12px 24px;
+  border-radius: 30px;
+  margin-right: 10px;
+  margin-bottom: 10px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border);
+  font-weight: 600;
+  color: var(--primary-dark);
 }
 
-button:hover {
-  background-color: #357abd;
-  transform: scale(1.05);
+input[type="radio"]:checked + label {
+  background-color: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+  box-shadow: 0 4px 10px rgba(139, 90, 43, 0.2);
 }
 
-img {
+input[type="radio"] + label:hover {
+  background-color: var(--bg-bege-medium);
+  border-color: var(--text-muted);
+}
+
+/* --- ESTILOS DO CHECK-IN --- */
+#checkin select, #humor {
   width: 100%;
-  border-radius: 10px;
+  max-width: 300px;
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 2px solid var(--bg-bege-medium);
+  font-size: 1rem;
+  margin-bottom: 20px;
+  background-color: var(--white);
+  color: var(--text-dark);
+  font-family: inherit;
+}
+
+/* --- ESTILOS DO RESULTADO --- */
+#resultado article {
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  padding: 30px;
+  background-color: var(--bg-creme);
+  text-align: center;
+}
+
+#resultado img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  border: 3px solid var(--white);
+  box-shadow: 0 5px 15px rgba(92, 64, 51, 0.1);
+}
+
+#resultado figcaption {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-top: 12px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+#resultado p#texto-resultado {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin-bottom: 25px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1rem;
+}
+
+/* --- ESTILOS DOS BOTÕES --- */
+button {
+  color: var(--white);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+#gerar {
+  background-color: var(--primary);
+  display: block;
+  width: 100%;
+  max-width: 300px;
+}
+
+#gerar:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+#favoritar {
+  background-color: var(--bg-bege-medium);
+  color: var(--primary-dark);
+  border: 1px solid var(--border);
+}
+
+/* --- ESTILOS DO RODAPÉ --- */
+footer {
+  text-align: center;
+  padding: 30px;
+  margin-top: 50px;
+  border-top: 1px solid var(--bg-bege-medium);
+  background-color: var(--white);
+  font-size: 0.95rem;
+  color: var(--text-muted);
 }
