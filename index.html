@@ -109,28 +109,30 @@
             </form>
         </section>
 
-        <section id="resultado">
-            <h2>Recomendação de Estilo</h2>
+     <section id="resultado">
+    <h2>Sua Recomendação Personalizada</h2>
+    <article>
+        <h3 id="titulo-look">Aguardando escolhas...</h3>
+        
+        <div id="guia-de-pecas">
+            <strong>👔 O que vestir (Sugestões):</strong>
+            <p id="descricao-pecas">Selecione as opções acima para ver as peças.</p>
+        </div>
 
-            <article>
-                <h3 id="titulo-look">Seu Look MoodWear</h3>
+        <p id="texto-resultado">
+            Aqui aparecerá a análise psicológica da sua escolha.
+        </p>
 
-                <figure>
-                    <img id="imagem-look" src="https://images.unsplash.com/photo-1434389678241-7e51084b655a?q=80&w=600" alt="Look sugerido">
-                    <figcaption id="legenda">
-                        Aguardando suas escolhas...
-                    </figcaption>
-                </figure>
+        <button type="button" id="favoritar">❤️ Salvar nos Favoritos</button>
+    </article>
+</section>
 
-                <p id="texto-resultado">
-                    Selecione seu tipo de corpo, estilo e humor para ver a mágica acontecer!
-                </p>
-
-                <br>
-
-                <button type="button" id="favoritar">❤️ Favoritar Look</button>
-            </article>
-        </section>
+<section id="meus-favoritos">
+    <h2>⭐ Meus Looks Salvos</h2>
+    <div id="lista-favoritos">
+        <p>Você ainda não salvou nenhum look.</p>
+    </div>
+</section>
 
     </main>
 
@@ -138,10 +140,10 @@
         <p>Projeto acadêmico - Desenvolvimento Web</p>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="db.js"></script>
-    <script src="controller.js"></script>
-    <script src="script.js"></script> </body>
+   <script src="db.js"></script>
+<script src="controller.js"></script>
+<script src="script.js"></script>
+
 </body>
 
 </html>

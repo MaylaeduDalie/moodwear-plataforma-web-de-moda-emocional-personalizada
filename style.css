@@ -234,4 +234,53 @@ footer {
   background-color: var(--white);
   font-size: 0.95rem;
   color: var(--text-muted);
+
+  #meus-favoritos {
+    margin-top: 50px;
+    padding: 20px;
+    border-top: 2px dashed var(--border);
+}
+
+.card-favorito {
+    transition: transform 0.2s;
+}
+
+.card-favorito:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#guia-de-pecas {
+    background: var(--bg-bege-light);
+    padding: 20px;
+    border-radius: 12px;
+    margin: 20px 0;
+    border-left: 6px solid var(--primary);
+    text-align: left; /* Lista sempre à esquerda */
+}
+
+#descricao-pecas {
+    white-space: pre-line; /* Faz o navegador entender os "enters" do JavaScript */
+    line-height: 1.8;
+    color: var(--text-dark);
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+#texto-resultado {
+    font-style: italic;
+    color: var(--text-muted);
+    border-top: 1px dashed var(--border);
+    padding-top: 15px;
+}
+
+#descricao-pecas {
+    white-space: pre-line; /* Isso faz as quebras de linha aparecerem */
+    text-align: left;
+    line-height: 1.6;
+    padding: 15px;
+    background: #fdfaf4;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary);
+}
 }
