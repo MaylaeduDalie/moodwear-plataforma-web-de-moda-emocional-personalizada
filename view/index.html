@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodWear - Seu humor, seu estilo</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>MoodWear</h1>
+        <p>Seu humor, seu estilo.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="#checkin">Check-in</a></li>
+            <li><a href="#resultado">Resultado</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="perfil">
+            <h2>Perfil do Usuário</h2>
+
+            <form id="form-perfil">
+                <fieldset>
+                    <legend>Tipo de Corpo</legend>
+                    <div class="opcoes-container">
+                        <input type="radio" id="corpo_ampulheta" name="corpo" value="ampulheta">
+                        <label for="corpo_ampulheta">Ampulheta</label>
+
+                        <input type="radio" id="corpo_retangular" name="corpo" value="retangular">
+                        <label for="corpo_retangular">Retangular</label>
+
+                        <input type="radio" id="corpo_triangulo" name="corpo" value="triangulo">
+                        <label for="corpo_triangulo">Triângulo (Pera)</label>
+
+                        <input type="radio" id="corpo_triangulo_invertido" name="corpo" value="trianguloInvertido">
+                        <label for="corpo_triangulo_invertido">Triângulo Invertido</label>
+
+                        <input type="radio" id="corpo_oval" name="corpo" value="oval">
+                        <label for="corpo_oval">Oval (Maçã)</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Estilo Predominante</legend>
+                    <div class="opcoes-container">
+                        <input type="radio" id="estilo_casual" name="estilo" value="casual">
+                        <label for="estilo_casual">Casual / Esportivo</label>
+
+                        <input type="radio" id="estilo_elegante" name="estilo" value="elegante">
+                        <label for="estilo_elegante">Elegante / Sofisticado</label>
+
+                        <input type="radio" id="estilo_classico" name="estilo" value="classico">
+                        <label for="estilo_classico">Clássico / Tradicional</label>
+
+                        <input type="radio" id="estilo_romantico" name="estilo" value="romantico">
+                        <label for="estilo_romantico">Romântico</label>
+
+                        <input type="radio" id="estilo_criativo" name="estilo" value="criativo">
+                        <label for="estilo_criativo">Criativo</label>
+
+                        <input type="radio" id="estilo_dramatico" name="estilo" value="dramatico">
+                        <label for="estilo_dramatico">Dramático / Urbano</label>
+                        
+                        <input type="radio" id="estilo_sedutor" name="estilo" value="sexy">
+                        <label for="estilo_sedutor">Sexy / Sedutor</label>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="checkin">
+            <h2>Como você está se sentindo hoje?</h2>
+
+            <form onsubmit="return false;">
+                <label for="humor">Selecione seu humor:</label>
+
+                <select id="humor">
+                    <option value="" disabled selected>Escolha seu humor...</option>
+                    <optgroup label="Humores Positivos">
+                        <option value="calmo">Calmo</option>
+                        <option value="feliz">Feliz</option>
+                        <option value="confianca">Confiante</option>
+                    </optgroup>
+
+                    <optgroup label="Humores Energéticos">
+                        <option value="energetico">Energético</option>
+                        <option value="motivado">Motivado</option>
+                        <option value="ousado">Ousado</option>
+                    </optgroup>
+
+                    <optgroup label="Humores Criativos">
+                        <option value="criativo">Criativo</option>
+                        <option value="inspirado">Inspirado</option>
+                        <option value="sonhador">Sonhador</option>
+                    </optgroup>
+                </select>
+
+                <button type="button" id="gerar">Gerar recomendação</button>
+            </form>
+        </section>
+
+    <section id="resultado">
+        <h2>Sua Recomendação Personalizada</h2>
+        <article>
+            <h3 id="titulo-look">Aguardando escolhas...</h3>
+            
+            <div id="guia-de-pecas">
+                <strong>👔 O que vestir (Sugestões):</strong>
+                <p id="descricao-pecas">Selecione as opções acima para ver as peças.</p>
+            </div>
+
+            <p id="texto-resultado">
+                Aqui aparecerá a análise psicológica da sua escolha.
+            </p>
+
+           <form id="form-favoritar" onsubmit="event.preventDefault();">
+    <input type="hidden" name="titulo" id="input-titulo">
+    <input type="hidden" name="pecas" id="input-pecas">
+    <button type="button" id="btn-salvar-php">❤️ Favoritar Look</button>
+</form>
+
+    <section id="meus-favoritos">
+        <h2>⭐ Meus Looks Salvos</h2>
+        <div id="lista-favoritos">
+            <p>Você ainda não salvou nenhum look.</p>
+        </div>
+    </section>
+
+    </main>
+
+    <footer>
+        <p>Projeto acadêmico - Desenvolvimento Web</p>
+    </footer>
+
+    <script src="db.js"></script>
+    <script src="script.js"></script> 
+    <script src="controller.js"></script>
+
+    <script>
+        // Esse pequeno código garante que os campos ocultos sejam preenchidos
+        // sempre que o botão de salvar for clicado.
+        document.getElementById('form-favoritar').addEventListener('submit', function() {
+            document.getElementById('input-titulo').value = document.getElementById('titulo-look').innerText;
+            document.getElementById('input-pecas').value = document.getElementById('descricao-pecas').innerText;
+        });
+    </script>
+
+</body>
+</html>

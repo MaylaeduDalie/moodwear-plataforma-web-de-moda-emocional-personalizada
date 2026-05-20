@@ -1,0 +1,19 @@
+// docs: modelagem do banco de dados e diagrama ER em DBML
+
+Table usuarios {
+  id integer [primary key, increment]
+  nome varchar [not null]
+  email varchar [unique, not null]
+  criado_em timestamp [default: `CURRENT_TIMESTAMP`]
+}
+
+Table favoritos {
+  id integer [primary key, increment]
+  usuario_id integer [not null]
+  titulo text [not null]
+  pecas text [not null]
+  data_criacao datetime [default: `CURRENT_TIMESTAMP`]
+}
+
+// Relacionamento (Passo 4): Muitos looks favoritados pertencem a um usuário
+Ref: favoritos.usuario_id > usuarios.id
