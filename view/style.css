@@ -219,12 +219,6 @@ button {
   transform: translateY(-2px);
 }
 
-#favoritar {
-  background-color: var(--bg-bege-medium);
-  color: var(--primary-dark);
-  border: 1px solid var(--border);
-}
-
 /* --- ESTILOS DO RODAPÉ --- */
 footer {
   text-align: center;
@@ -234,70 +228,81 @@ footer {
   background-color: var(--white);
   font-size: 0.95rem;
   color: var(--text-muted);
+}
 
-  #meus-favoritos {
-    margin-top: 50px;
-    padding: 20px;
-    border-top: 2px dashed var(--border);
+/* --- ESTILOS DA ÁREA DE FAVORITOS (CORRIGIDOS FORA DO FOOTER) --- */
+#meus-favoritos {
+  margin-top: 50px;
+  padding: 20px;
+  border-top: 2px dashed var(--border);
 }
 
 .card-favorito {
-    transition: transform 0.2s;
+  transition: transform 0.2s;
 }
 
 .card-favorito:hover {
-    transform: scale(1.01);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transform: scale(1.01);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 #guia-de-pecas {
-    background: var(--bg-bege-light);
-    padding: 20px;
-    border-radius: 12px;
-    margin: 20px 0;
-    border-left: 6px solid var(--primary);
-    text-align: left; /* Lista sempre à esquerda */
-}
-
-#descricao-pecas {
-    white-space: pre-line; /* Faz o navegador entender os "enters" do JavaScript */
-    line-height: 1.8;
-    color: var(--text-dark);
-    font-weight: 500;
-    margin-top: 10px;
+  background: var(--bg-bege-light);
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  border-left: 6px solid var(--primary);
+  text-align: left; 
 }
 
 #texto-resultado {
-    font-style: italic;
-    color: var(--text-muted);
-    border-top: 1px dashed var(--border);
-    padding-top: 15px;
+  font-style: italic;
+  color: var(--text-muted);
+  border-top: 1px dashed var(--border);
+  padding-top: 15px;
 }
 
 #descricao-pecas {
-    white-space: pre-line; /* Isso faz as quebras de linha aparecerem */
-    text-align: left;
-    line-height: 1.6;
-    padding: 15px;
-    background: #fdfaf4;
-    border-radius: 8px;
-    border-left: 4px solid var(--primary);
+  white-space: pre-line; 
+  text-align: left;
+  line-height: 1.6;
+  padding: 15px;
+  background: #fdfaf4;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary);
+  color: var(--text-dark);
+  font-weight: 500;
+  margin-top: 10px;
 }
 
-.btn-sucesso {
-    background-color: #2ecc71 !important; /* Verde chamativo */
-    color: white !important;              /* Texto branco para dar contraste */
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    width: 100%;
-    margin-top: 10px;
-    transition: background 0.3s;
+/* 🌟 ESTADO INICIAL: Verde bem visível e legível no carregamento */
+.btn-inicial {
+  background-color: #2ecc71 !important; 
+  color: white !important;              
+  border: 1px solid #27ae60 !important;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 10px;
+  transition: background 0.3s;
 }
 
-.btn-sucesso:hover {
-    background-color: #27ae60 !important; /* Verde um pouco mais escuro ao passar o mouse */
+.btn-inicial:hover {
+  background-color: #27ae60 !important; 
 }
+
+/* 🌟 ESTADO PÓS-CLIQUE: Transparente/Bege indicando desativado */
+.btn-clicado {
+  background-color: var(--bg-bege-medium) !important;
+  color: var(--text-muted) !important;
+  border: 1px solid var(--border) !important;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: not-allowed;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 10px;
+  opacity: 0.6;
 }
