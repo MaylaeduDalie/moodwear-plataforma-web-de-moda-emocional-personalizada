@@ -1,5 +1,5 @@
 <?php
-require_once 'BusinessRuleException.php';
+// REMOVIDO o require_once antigo. Sistema 100% dependente do Autoload!
 
 class LookService {
     private $repository;

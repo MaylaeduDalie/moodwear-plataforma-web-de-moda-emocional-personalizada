@@ -1,5 +1,5 @@
 <?php
-require_once 'model.php';
+// REMOVIDO o require_once antigo. O Autoload cuida disso agora!
 
 class LookController {
     private $service;
@@ -16,12 +16,14 @@ class LookController {
 
             $this->service->processar($look);
             
-            echo "<h2>✅ Look guardado com sucesso!</h2>";
-            echo "<a href='index.php'>Voltar ao MoodWear</a>";
+            // Retorna apenas texto limpo para o console.log do JS ler com sucesso
+            echo "Sucesso: Look guardado no banco SQLite!";
         } catch (BusinessRuleException $e) {
-            die("<h2>⚠️ Erro:</h2>" . $e->getMessage() . "<br><a href='index.php'>Tentar novamente</a>");
+            http_response_code(400);
+            echo "Regra de Negocio: " . $e->getMessage();
         } catch (Exception $e) {
-            die("<h2>❌ Erro no Servidor:</h2>" . $e->getMessage());
+            http_response_code(500);
+            echo "Erro no Servidor: " . $e->getMessage();
         }
     }
 }
