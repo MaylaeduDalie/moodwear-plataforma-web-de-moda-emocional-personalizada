@@ -1,4 +1,3 @@
-/* --- ESTILOS GERAIS (Paleta Marrom/Bege) --- */
 :root {
   --primary: #8b5a2b;       
   --primary-dark: #5c4033;  
@@ -99,7 +98,6 @@ h2 {
   margin-bottom: 30px;
 }
 
-/* --- ESTILOS DO PERFIL & RÁDIOS --- */
 fieldset {
   border: none;
   padding: 0;
@@ -143,7 +141,6 @@ input[type="radio"] + label:hover {
   border-color: var(--text-muted);
 }
 
-/* --- ESTILOS DO CHECK-IN --- */
 #checkin select, #humor {
   width: 100%;
   max-width: 300px;
@@ -157,7 +154,6 @@ input[type="radio"] + label:hover {
   font-family: inherit;
 }
 
-/* --- ESTILOS DO RESULTADO --- */
 #resultado article {
   border: 1px solid var(--border);
   border-radius: 15px;
@@ -194,7 +190,6 @@ input[type="radio"] + label:hover {
   font-size: 1.1rem;
 }
 
-/* --- ESTILOS DOS BOTÕES --- */
 button {
   color: var(--white);
   border: none;
@@ -230,7 +225,6 @@ footer {
   color: var(--text-muted);
 }
 
-/* --- ESTILOS DA ÁREA DE FAVORITOS (CORRIGIDOS FORA DO FOOTER) --- */
 #meus-favoritos {
   margin-top: 50px;
   padding: 20px;
@@ -275,7 +269,6 @@ footer {
   margin-top: 10px;
 }
 
-/* 🌟 ESTADO INICIAL: Verde bem visível e legível no carregamento */
 .btn-inicial {
   background-color: #2ecc71 !important; 
   color: white !important;              
@@ -293,7 +286,6 @@ footer {
   background-color: #27ae60 !important; 
 }
 
-/* 🌟 ESTADO PÓS-CLIQUE: Transparente/Bege indicando desativado */
 .btn-clicado {
   background-color: var(--bg-bege-medium) !important;
   color: var(--text-muted) !important;

@@ -1,5 +1,4 @@
 <?php
-// REMOVIDO o require_once antigo. Sistema 100% dependente do Autoload!
 
 class LookService {
     private $repository;
@@ -9,7 +8,6 @@ class LookService {
     }
 
     public function processar(LookModel $look): void {
-        // Regra de Negócio: Não deixar salvar se o título for o padrão vazio
         if (empty($look->getTitulo()) || $look->getTitulo() === "Aguardando escolhas...") {
             throw new BusinessRuleException("Primeiro deves gerar uma recomendação para poder salvar!");
         }

@@ -1,12 +1,7 @@
-// db.js - Mini Framework para IndexedDB (Global)
-
 const DB_NAME = "MoodWearDB";
 const DB_VERSION = 1;
 const STORE_NAME = "favoritos";
 
-/**
- * Inicia o banco de dados e cria a store (tabela) se não existir.
- */
 async function iniciarBanco() {
     return new Promise((resolve, reject) => {
         const request = indexedDB.open(DB_NAME, DB_VERSION);
@@ -14,7 +9,6 @@ async function iniciarBanco() {
         request.onupgradeneeded = (event) => {
             const db = event.target.result;
             if (!db.objectStoreNames.contains(STORE_NAME)) {
-                // Criamos a store com um id autoincremento
                 db.createObjectStore(STORE_NAME, { keyPath: "id", autoIncrement: true });
             }
         };
@@ -24,9 +18,6 @@ async function iniciarBanco() {
     });
 }
 
-/**
- * Adiciona um item ao banco de dados.
- */
 async function adicionarItem(item) {
     const db = await iniciarBanco();
     return new Promise((resolve, reject) => {
@@ -39,9 +30,6 @@ async function adicionarItem(item) {
     });
 }
 
-/**
- * Busca todos os itens salvos.
- */
 async function buscarItens() {
     const db = await iniciarBanco();
     return new Promise((resolve, reject) => {
@@ -54,9 +42,6 @@ async function buscarItens() {
     });
 }
 
-/**
- * Deleta um item pelo ID.
- */
 async function deletarItem(id) {
     const db = await iniciarBanco();
     return new Promise((resolve, reject) => {

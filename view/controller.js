@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const listaFavoritosDiv = document.getElementById("lista-favoritos");
     const btnFavoritar = document.getElementById("btn-salvar-php");
-    const botaoGerar = document.getElementById("gerar"); // Seleciona o botão de gerar do script.js
+    const botaoGerar = document.getElementById("gerar");
 
-    // 1. Atualiza a lista visual (vinda do db.js)
     async function renderizarFavoritos() {
         const favoritos = await buscarItens();
         if (favoritos.length === 0) {
@@ -26,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 2. Lógica do Botão Favoritar
     btnFavoritar.addEventListener("click", async () => {
         const titulo = document.getElementById("titulo-look").innerText;
         const pecas = document.getElementById("descricao-pecas").innerText;
@@ -36,12 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Se o botão já foi clicado para este look, impede cliques repetidos
         if (btnFavoritar.classList.contains("btn-clicado")) {
             return;
         }
 
-        // SALVAR NO NAVEGADOR (IndexedDB)
         const novoFavorito = {
             tituloLook: titulo,
             pecas: pecas,
@@ -50,10 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
         await adicionarItem(novoFavorito);
         renderizarFavoritos();
 
-        // 🌟 TROCA A CLASSE: Remove o verde (.btn-inicial) e aplica o estilo transparente (.btn-clicado)
         btnFavoritar.className = "btn-clicado";
 
-        // ENVIAR PARA O PHP (Silenciosamente)
         const formData = new FormData();
         formData.append('titulo', titulo);
         formData.append('pecas', pecas);
@@ -69,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Look favoritado!");
     });
 
-    // 🌟 RESETA O BOTÃO: Quando um look novo for gerado, o botão volta a ficar verde
     if (botaoGerar) {
         botaoGerar.addEventListener("click", () => {
             btnFavoritar.className = "btn-inicial";

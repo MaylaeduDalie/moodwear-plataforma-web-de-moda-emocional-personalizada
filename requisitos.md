@@ -1,4 +1,4 @@
-📋 Lista de Requisitos Funcionais - MoodWear
+Lista de Requisitos Funcionais - MoodWear
 1. Gestão de Perfil e Personalização (Prioridade: Alta)
 RF01 - Cadastro de Perfil Físico: O sistema deve permitir que o usuário cadastre e edite dados básicos (tipo de corpo, tom de pele e preferências estéticas).
 
@@ -32,7 +32,7 @@ RF13 - Painel de Curadoria: Interface para a equipe cadastrar peças, cores e es
 
 RF14 - Gestão de Regras Lógicas: Ferramenta para configurar as associações entre emoções específicas e os atributos de moda correspondentes.
 
-🏗️ Requisitos Não Funcionais
+Requisitos Não Funcionais
 1. Usabilidade (Experiência do Usuário)
 RNF01 - Interface Estética e Minimalista: Por se tratar de um projeto que une moda e psicologia, a interface deve seguir princípios de design limpo (minimalista) e cores que transmitam calma e confiança, garantindo uma experiência visual prazerosa.
 

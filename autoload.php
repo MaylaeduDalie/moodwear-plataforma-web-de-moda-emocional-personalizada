@@ -1,12 +1,11 @@
 <?php
 spl_autoload_register(function ($classe) {
-    // Lista de pastas onde o autoload vai procurar as classes do MVC
+    // Lista de pastas atualizada com a nova estrutura que o professor pediu
     $pastas = [
         __DIR__ . '/app/controller/',
         __DIR__ . '/app/model/',
         __DIR__ . '/app/middleware/',
-        __DIR__ . '/app/services/',
-        __DIR__ . '/' // Classes soltas na raiz (Repositories, Database)
+        __DIR__ . '/app/services/'
     ];
 
     foreach ($pastas as $pasta) {

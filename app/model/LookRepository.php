@@ -1,5 +1,4 @@
 <?php
-// REMOVIDO os require_once manuais. O autoload.php faz toda a mágica agora!
 
 class LookRepository implements ILookRepository {
     private $pdo;
