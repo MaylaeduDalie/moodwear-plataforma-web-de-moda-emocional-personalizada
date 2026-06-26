@@ -15,7 +15,7 @@ class LookController {
 
             $this->service->processar($look);
             
-            echo json_encode(["status" => "sucesso", "mensagem" => "Look guardado no banco SQLite!"]);
+            echo "Sucesso: Look guardado no banco SQLite!";
         } catch (BusinessRuleException $e) {
             http_response_code(400);
             echo "Regra de Negocio: " . $e->getMessage();

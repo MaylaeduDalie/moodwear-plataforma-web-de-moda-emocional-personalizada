@@ -1,5 +1,4 @@
 <?php
-
 class LookRepository implements ILookRepository {
     private $pdo;
 
